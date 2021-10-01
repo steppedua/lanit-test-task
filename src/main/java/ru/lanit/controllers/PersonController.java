@@ -20,7 +20,7 @@ public class PersonController {
     private final PersonMapper personMapper;
 
     @PostMapping("/person")
-    public ResponseEntity<Person> createPerson(@Valid @RequestBody PersonDto personDto) {
+    public ResponseEntity<Void> createPerson(@Valid @RequestBody PersonDto personDto) {
         personService.createPerson(personDto);
         return ResponseEntity.ok().build();
     }
